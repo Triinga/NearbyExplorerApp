@@ -79,8 +79,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="4Lc-RI-6ax"/>
                     <connections>
-                        <outlet property="emailTextField" destination="Jl7-iI-BHd" id="glV-jg-kSi"/>
-                        <outlet property="passwordTextField" destination="1O9-Lu-fXv" id="b5D-OM-9tz"/>
+                        <outlet property="tvEmail" destination="Jl7-iI-BHd" id="ZCG-mE-CBb"/>
+                        <outlet property="tvPassword" destination="1O9-Lu-fXv" id="OUE-7E-w0K"/>
                         <segue destination="P8t-kj-KpF" kind="show" identifier="goToNext" id="xXd-hp-MaU"/>
                     </connections>
                 </viewController>
@@ -104,10 +104,10 @@
             </objects>
             <point key="canvasLocation" x="2920" y="20"/>
         </scene>
-        <!--Signup View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="o7g-yX-g9f">
             <objects>
-                <viewController id="5Id-98-mHJ" customClass="SignupViewController" customModule="NearbyExplorerApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="5Id-98-mHJ" customClass="RegisterViewController" customModule="NearbyExplorerApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LxE-zg-l0D">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -118,7 +118,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Sign Up"/>
                                 <connections>
-                                    <action selector="signupClicked:" destination="5Id-98-mHJ" eventType="touchUpInside" id="g3f-Nm-XBu"/>
+                                    <action selector="registerClicked:" destination="5Id-98-mHJ" eventType="touchUpInside" id="7BE-Dd-mu4"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8od-uf-12e">
@@ -133,14 +133,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f1h-d0-Hmk">
+                                <rect key="frame" x="148" y="192" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cG6-r6-Xgg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="PHD-Jn-Mo4"/>
                     <connections>
-                        <outlet property="emailTextField" destination="uVJ-dn-Lpe" id="Gat-LT-YS5"/>
-                        <outlet property="passwordTextField" destination="8od-uf-12e" id="iCs-ko-FoR"/>
+                        <outlet property="tvEmail" destination="uVJ-dn-Lpe" id="l4f-uR-TKE"/>
+                        <outlet property="tvName" destination="f1h-d0-Hmk" id="fIT-GV-mH2"/>
+                        <outlet property="tvPassword" destination="8od-uf-12e" id="xIT-wZ-1eb"/>
                         <segue destination="P8t-kj-KpF" kind="show" identifier="goToNext" id="kxJ-V6-LuH"/>
                     </connections>
                 </viewController>

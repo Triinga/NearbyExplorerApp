@@ -6,12 +6,13 @@
 //
 
 import UIKit
-import Firebase
+//import Firebase
 class LoginViewController: UIViewController {
+    let db = Databasehandler()
 
-    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var tvEmail: UITextField!
     
-    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var tvPassword: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,19 +21,31 @@ class LoginViewController: UIViewController {
     
 
     @IBAction func loginClicked(_ sender: UIButton) {
-        guard let email = emailTextField.text else {return}
-        guard let password = passwordTextField.text else {return}
+        let ans = db.loginAuthentication(email: tvEmail.text!, password: tvPassword.text!)
+        if ans {
+            let data = db.executeSelect(email: tvEmail.text!, password: tvPassword.text!)
+            print(data.name)
+            print(data.email)
+            print(data.password)
+            self.performSegue(withIdentifier: "goToNext", sender: self)
+        }else{
+            print("invalid")
+        }
+//        guard let email = emailTextField.text else {return}
+//        guard let password = passwordTextField.text else {return}
         
         //implement firebase
-        Auth.auth().signIn(withEmail: email, password: password) {firebaseResult, error in
-            if let e = error{
-                print("error")
-            } else {
-                //go to homescreen
-                self.performSegue(withIdentifier: "goToNext", sender: self)
-            }
+//        Auth.auth().signIn(withEmail: email, password: password) {firebaseResult, error in
+//            if let e = error{
+//                print("error")
+//            } else {
+//                //go to homescreen
+//                self.performSegue(withIdentifier: "goToNext", sender: self)
+//            }
             
-        }    }
+//        }
+    
+}
     /*
     // MARK: - Navigation
 
