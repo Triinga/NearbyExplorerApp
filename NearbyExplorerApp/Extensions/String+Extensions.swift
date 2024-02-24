@@ -1,20 +1,20 @@
+////
+////  String+Extensions.swift
+////  NearbyExplorerApp
+////
+////  Created by Lediona Kadiri on 24.2.24.
+////
 //
-//  String+Extensions.swift
-//  NearbyExplorerApp
+//import Foundation
 //
-//  Created by Lediona Kadiri on 24.2.24.
-//
-
-import Foundation
-
-extension String {
-    
-    var formatPhoneForCall: String {
-        self.replacingOccurrences(of: " ", with: "")
-            .replacingOccurrences(of: "+", with: "")
-            .replacingOccurrences(of: "(", with: "")
-            .replacingOccurrences(of: ")", with: "")
-            .replacingOccurrences(of: "-", with: "")
-    }
-    
-}
+//extension String {
+//    
+//    var formatPhoneForCall: String {
+//        self.replacingOccurrences(of: " ", with: "")
+//            .replacingOccurrences(of: "+", with: "")
+//            .replacingOccurrences(of: "(", with: "")
+//            .replacingOccurrences(of: ")", with: "")
+//            .replacingOccurrences(of: "-", with: "")
+//    }
+//    
+//}

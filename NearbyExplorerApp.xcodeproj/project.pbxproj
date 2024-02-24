@@ -22,6 +22,7 @@
 		F78B80C62B83652D00E33E19 /* DBHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78B80C52B83652D00E33E19 /* DBHandler.swift */; };
 		F78B80C82B83667500E33E19 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78B80C72B83667500E33E19 /* RegisterViewController.swift */; };
 		F78B80CA2B836B4F00E33E19 /* entities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78B80C92B836B4F00E33E19 /* entities.swift */; };
+		F78CECF92B89772400F29421 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78CECF82B89772400F29421 /* MapViewController.swift */; };
 		F7A083492B81348F00EDB7B5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A083482B81348F00EDB7B5 /* LoginViewController.swift */; };
 		F7A0834B2B8135BF00EDB7B5 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A0834A2B8135BF00EDB7B5 /* SignupViewController.swift */; };
 		F7A083502B81385500EDB7B5 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F7A0834F2B81385500EDB7B5 /* FirebaseAuth */; };
@@ -46,6 +47,7 @@
 		F78B80C52B83652D00E33E19 /* DBHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHandler.swift; sourceTree = "<group>"; };
 		F78B80C72B83667500E33E19 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F78B80C92B836B4F00E33E19 /* entities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = entities.swift; sourceTree = "<group>"; };
+		F78CECF82B89772400F29421 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F7A083482B81348F00EDB7B5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F7A0834A2B8135BF00EDB7B5 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		F7A083512B81402500EDB7B5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				F7A083512B81402500EDB7B5 /* GoogleService-Info.plist */,
 				F78B80C72B83667500E33E19 /* RegisterViewController.swift */,
 				F78B80C92B836B4F00E33E19 /* entities.swift */,
+				F78CECF82B89772400F29421 /* MapViewController.swift */,
 			);
 			path = NearbyExplorerApp;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				61F6CEB32B8965BE00691ACC /* PlaceDetailViewController.swift in Sources */,
 				F78B80CA2B836B4F00E33E19 /* entities.swift in Sources */,
 				F7823AE22B7EA32100A0C806 /* SceneDelegate.swift in Sources */,
+				F78CECF92B89772400F29421 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

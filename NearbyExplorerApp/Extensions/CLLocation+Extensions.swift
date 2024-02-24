@@ -1,17 +1,17 @@
+////
+////  CLLocation+Extensions.swift
+////  NearbyExplorerApp
+////
+////  Created by Lediona Kadiri on 23.2.24.
+////
 //
-//  CLLocation+Extensions.swift
-//  NearbyExplorerApp
+//import Foundation
+//import CoreLocation
 //
-//  Created by Lediona Kadiri on 23.2.24.
+//extension CLLocation{
+//    
+//    static var `default` :CLLocation {
+//        CLLocation(latitude: 36.063457, longitude: -95.880516)
 //
-
-import Foundation
-import CoreLocation
-
-extension CLLocation{
-    
-    static var `default` :CLLocation {
-        CLLocation(latitude: 36.063457, longitude: -95.880516)
-
-    }
-}
+//    }
+//}
