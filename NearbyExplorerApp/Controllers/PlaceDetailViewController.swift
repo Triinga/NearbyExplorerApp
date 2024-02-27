@@ -72,14 +72,32 @@ class PlaceDetailViewController: UIViewController{
         UIApplication.shared.open(url)
     }
 
+//    @objc func callButtonTapped(_ sender: UIButton){
+//        //place.phone = +(512)-435-2345
+//        // what we need = 5124352345
+//        guard let url = URL(string: "tel://\(place.phone.formatPhoneForCall)")
+//        else { return }
+//        UIApplication.shared.open(url)
+//
+//    }
+    
     @objc func callButtonTapped(_ sender: UIButton){
-        //place.phone = +(512)-435-2345
-        // what we need = 5124352345
-        guard let url = URL(string: "tel://\(place.phone.formatPhoneForCall)")
-        else { return }
-        UIApplication.shared.open(url)
-
+        // Remove non-numeric characters from the phone number
+        let allowedCharacters = CharacterSet.decimalDigits
+        let formattedPhoneNumber = place.phone.components(separatedBy: allowedCharacters.inverted).joined()
+        
+        guard let url = URL(string: "tel://\(formattedPhoneNumber)") else {
+            print("Invalid phone number or URL")
+            return
+        }
+        
+        if UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url)
+        } else {
+            print("Failed to open URL")
+        }
     }
+
 
     private func setupUI(){
         let stackView = UIStackView()

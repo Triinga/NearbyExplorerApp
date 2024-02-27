@@ -12,7 +12,7 @@ import CoreLocation
 extension CLLocation{
     
     static var `default` :CLLocation {
-        CLLocation(latitude: 42.64956, longitude: 21.16694)
+        CLLocation(latitude: 42.64950, longitude: 21.16711)
 
     }
 }

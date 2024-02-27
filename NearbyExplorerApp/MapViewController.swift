@@ -51,7 +51,7 @@ class MapViewController: UIViewController{
     private func setupUI(){
 
         view.addSubview(searchTextField)
-        //view.addSubview(mapView)
+        view.addSubview(mapView)
 
         view.bringSubviewToFront(searchTextField)
 
@@ -61,17 +61,17 @@ class MapViewController: UIViewController{
         searchTextField.heightAnchor.constraint(equalToConstant: 44).isActive = true
         searchTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         searchTextField.widthAnchor.constraint(equalToConstant: view.bounds.size.width/1.2).isActive = true
-        searchTextField.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 45).isActive = true
+        searchTextField.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30).isActive = true
 
         searchTextField.returnKeyType = .go
 
 
 //        //add constraints to the mapView
-//
-//        mapView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-//            mapView.heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
-//        mapView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-//        mapView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+
+        mapView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        mapView.heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
+        mapView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        mapView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
 
     private func checkLocationAuthorization(){
