@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61F6CEAB2B8945AE00691ACC /* PlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F6CEAA2B8945AE00691ACC /* PlaceAnnotation.swift */; };
+		61F6CEAE2B89478500691ACC /* CLLocation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F6CEAD2B89478500691ACC /* CLLocation+Extensions.swift */; };
+		61F6CEB12B894A5300691ACC /* PlacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F6CEB02B894A5300691ACC /* PlacesTableViewController.swift */; };
+		61F6CEB32B8965BE00691ACC /* PlaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F6CEB22B8965BE00691ACC /* PlaceDetailViewController.swift */; };
+		61F6CEB52B8972E500691ACC /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F6CEB42B8972E500691ACC /* String+Extensions.swift */; };
 		F7823AE02B7EA32100A0C806 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7823ADF2B7EA32100A0C806 /* AppDelegate.swift */; };
 		F7823AE22B7EA32100A0C806 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7823AE12B7EA32100A0C806 /* SceneDelegate.swift */; };
 		F7823AE42B7EA32100A0C806 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7823AE32B7EA32100A0C806 /* ViewController.swift */; };
@@ -17,6 +22,7 @@
 		F78B80C62B83652D00E33E19 /* DBHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78B80C52B83652D00E33E19 /* DBHandler.swift */; };
 		F78B80C82B83667500E33E19 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78B80C72B83667500E33E19 /* RegisterViewController.swift */; };
 		F78B80CA2B836B4F00E33E19 /* entities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78B80C92B836B4F00E33E19 /* entities.swift */; };
+		F78CECF92B89772400F29421 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78CECF82B89772400F29421 /* MapViewController.swift */; };
 		F7A083492B81348F00EDB7B5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A083482B81348F00EDB7B5 /* LoginViewController.swift */; };
 		F7A0834B2B8135BF00EDB7B5 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A0834A2B8135BF00EDB7B5 /* SignupViewController.swift */; };
 		F7A083502B81385500EDB7B5 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F7A0834F2B81385500EDB7B5 /* FirebaseAuth */; };
@@ -24,6 +30,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		61F6CEAA2B8945AE00691ACC /* PlaceAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotation.swift; sourceTree = "<group>"; };
+		61F6CEAD2B89478500691ACC /* CLLocation+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocation+Extensions.swift"; sourceTree = "<group>"; };
+		61F6CEB02B894A5300691ACC /* PlacesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTableViewController.swift; sourceTree = "<group>"; };
+		61F6CEB22B8965BE00691ACC /* PlaceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewController.swift; sourceTree = "<group>"; };
+		61F6CEB42B8972E500691ACC /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		F7823ADC2B7EA32100A0C806 /* NearbyExplorerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NearbyExplorerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7823ADF2B7EA32100A0C806 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7823AE12B7EA32100A0C806 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +47,7 @@
 		F78B80C52B83652D00E33E19 /* DBHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHandler.swift; sourceTree = "<group>"; };
 		F78B80C72B83667500E33E19 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F78B80C92B836B4F00E33E19 /* entities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = entities.swift; sourceTree = "<group>"; };
+		F78CECF82B89772400F29421 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F7A083482B81348F00EDB7B5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F7A0834A2B8135BF00EDB7B5 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		F7A083512B81402500EDB7B5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -53,6 +65,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		61F6CEA92B89458D00691ACC /* Annotations */ = {
+			isa = PBXGroup;
+			children = (
+				61F6CEAA2B8945AE00691ACC /* PlaceAnnotation.swift */,
+			);
+			path = Annotations;
+			sourceTree = "<group>";
+		};
+		61F6CEAC2B89476300691ACC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				61F6CEAD2B89478500691ACC /* CLLocation+Extensions.swift */,
+				61F6CEB42B8972E500691ACC /* String+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		61F6CEAF2B894A2E00691ACC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				61F6CEB02B894A5300691ACC /* PlacesTableViewController.swift */,
+				61F6CEB22B8965BE00691ACC /* PlaceDetailViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		F7823AD32B7EA32100A0C806 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +110,9 @@
 		F7823ADE2B7EA32100A0C806 /* NearbyExplorerApp */ = {
 			isa = PBXGroup;
 			children = (
+				61F6CEAF2B894A2E00691ACC /* Controllers */,
+				61F6CEAC2B89476300691ACC /* Extensions */,
+				61F6CEA92B89458D00691ACC /* Annotations */,
 				F78B80C52B83652D00E33E19 /* DBHandler.swift */,
 				F78B80C32B8364FB00E33E19 /* nearbyappDB.db */,
 				F7823ADF2B7EA32100A0C806 /* AppDelegate.swift */,
@@ -86,6 +127,7 @@
 				F7A083512B81402500EDB7B5 /* GoogleService-Info.plist */,
 				F78B80C72B83667500E33E19 /* RegisterViewController.swift */,
 				F78B80C92B836B4F00E33E19 /* entities.swift */,
+				F78CECF82B89772400F29421 /* MapViewController.swift */,
 			);
 			path = NearbyExplorerApp;
 			sourceTree = "<group>";
@@ -170,13 +212,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				F78B80C62B83652D00E33E19 /* DBHandler.swift in Sources */,
+				61F6CEB52B8972E500691ACC /* String+Extensions.swift in Sources */,
+				61F6CEAE2B89478500691ACC /* CLLocation+Extensions.swift in Sources */,
+				61F6CEAB2B8945AE00691ACC /* PlaceAnnotation.swift in Sources */,
 				F7A083492B81348F00EDB7B5 /* LoginViewController.swift in Sources */,
+				61F6CEB12B894A5300691ACC /* PlacesTableViewController.swift in Sources */,
 				F78B80C82B83667500E33E19 /* RegisterViewController.swift in Sources */,
 				F7823AE42B7EA32100A0C806 /* ViewController.swift in Sources */,
 				F7A0834B2B8135BF00EDB7B5 /* SignupViewController.swift in Sources */,
 				F7823AE02B7EA32100A0C806 /* AppDelegate.swift in Sources */,
+				61F6CEB32B8965BE00691ACC /* PlaceDetailViewController.swift in Sources */,
 				F78B80CA2B836B4F00E33E19 /* entities.swift in Sources */,
 				F7823AE22B7EA32100A0C806 /* SceneDelegate.swift in Sources */,
+				F78CECF92B89772400F29421 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,9 +373,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NearbyExplorerApp/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Nearby Explorer wants to know your exact location to show nearby pleaces";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Nearby Explorer wants to know your exact location to show nearby pleaces";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -352,9 +401,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NearbyExplorerApp/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Nearby Explorer wants to know your exact location to show nearby pleaces";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Nearby Explorer wants to know your exact location to show nearby pleaces";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
