@@ -119,6 +119,27 @@ class Databasehandler {
     
     
     }
+    func doesEmailExist(email: String) -> Bool {
+        let query = "SELECT COUNT(*) FROM logindata WHERE email = '\(email)'"
+        var queryStatement: OpaquePointer? = nil
+        
+        if sqlite3_prepare_v2(db, query, -1, &queryStatement, nil) == SQLITE_OK {
+            defer {
+                sqlite3_finalize(queryStatement)
+            }
+            
+            if sqlite3_step(queryStatement) == SQLITE_ROW {
+                let count = sqlite3_column_int(queryStatement, 0)
+                return count > 0
+            }
+        } else {
+            let errmsg = String(cString: sqlite3_errmsg(db)!)
+            print("Query could not be prepared: \(errmsg)")
+        }
+        
+        return false
+    }
+
     
     /////////////////////////////
     //Copy database for fist time

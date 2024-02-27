@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nxI-x2-8t7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nxI-x2-8t7">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -156,7 +155,7 @@
                         <outlet property="tvEmail" destination="uVJ-dn-Lpe" id="l4f-uR-TKE"/>
                         <outlet property="tvName" destination="f1h-d0-Hmk" id="fIT-GV-mH2"/>
                         <outlet property="tvPassword" destination="8od-uf-12e" id="xIT-wZ-1eb"/>
-                        <segue destination="cCz-zJ-u2N" kind="show" identifier="goToLogin" id="eeM-Dy-6dz"/>
+                        <segue destination="cCz-zJ-u2N" kind="show" identifier="goToLogin" id="9Vn-Sn-19c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1lZ-b8-x4m" sceneMemberID="firstResponder"/>
@@ -183,7 +182,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="eeM-Dy-6dz"/>
+        <segue reference="9Vn-Sn-19c"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">

@@ -23,18 +23,42 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func registerClicked(_ sender: UIButton) {
-        if tvEmail.text! != "" && tvPassword.text! != ""{
-            var q = "insert into logindata(name,email,password) values ('"+tvName.text!+"' , '"+tvEmail.text!+"' , '"+tvPassword.text!+"')"
-            let result = db.executeQuery(query: q)
-            
-            if result{
-                self.performSegue(withIdentifier: "goToNext", sender: self)
-            }
-            else{
-                print("Data not Added")
+        if tvEmail.text! != "" && tvPassword.text! != "" {
+            // Check if the email already exists in the database
+            let emailExists = db.doesEmailExist(email: tvEmail.text!)
+
+            if emailExists {
+                // Email already exists, show an alert
+                let duplicateEmailAlert = UIAlertController(title: "Duplicate Email", message: "This email is already registered. Please use a different email.", preferredStyle: .alert)
+                let dismissAction = UIAlertAction(title: "Dismiss", style: .default, handler: nil)
+                duplicateEmailAlert.addAction(dismissAction)
+                self.present(duplicateEmailAlert, animated: true, completion: nil)
+            } else {
+                // Email doesn't exist, proceed with registration
+                let q = "insert into logindata(name,email,password) values ('"+tvName.text!+"' , '"+tvEmail.text!+"' , '"+tvPassword.text!+"')"
+                let result = db.executeQuery(query: q)
+
+                if result {
+                    // Successfully registered
+                    let successAlert = UIAlertController(title: "Success", message: "Successfully registered!", preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+                        // Navigate to the login screen or perform any other actions after successful registration
+                        self.performSegue(withIdentifier: "goToLogin", sender: self)
+                    }
+                    successAlert.addAction(okAction)
+                    self.present(successAlert, animated: true, completion: nil)
+                } else {
+                    // Data not added (invalid input)
+                    let invalidAlert = UIAlertController(title: "Invalid Input", message: "Please check your input and try again.", preferredStyle: .alert)
+                    let dismissAction = UIAlertAction(title: "Dismiss", style: .default, handler: nil)
+                    invalidAlert.addAction(dismissAction)
+                    self.present(invalidAlert, animated: true, completion: nil)
+                }
             }
         }
     }
+
+
     
     /*
     // MARK: - Navigation
