@@ -28,9 +28,18 @@ class LoginViewController: UIViewController {
             print(data.email)
             print(data.password)
             self.performSegue(withIdentifier: "goToNext", sender: self)
-        }else{
-            print("invalid")
+        } else {
+            let alert = UIAlertController(title: "Invalid Input", message: "Please enter correct email and password", preferredStyle: .alert)
+
+            // You might want to add an action to the alert, for example, a "Dismiss" button
+            let dismissAction = UIAlertAction(title: "Dismiss", style: .default, handler: nil)
+            alert.addAction(dismissAction)
+
+            // Present the alert
+            self.present(alert, animated: true, completion: nil)
         }
+    }
+
 //        guard let email = emailTextField.text else {return}
 //        guard let password = passwordTextField.text else {return}
         
@@ -56,4 +65,4 @@ class LoginViewController: UIViewController {
     }
     */
 
-}
+

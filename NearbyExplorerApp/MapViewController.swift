@@ -61,7 +61,7 @@ class MapViewController: UIViewController{
         searchTextField.heightAnchor.constraint(equalToConstant: 44).isActive = true
         searchTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         searchTextField.widthAnchor.constraint(equalToConstant: view.bounds.size.width/1.2).isActive = true
-        searchTextField.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30).isActive = true
+        searchTextField.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 15).isActive = true
 
         searchTextField.returnKeyType = .go
 
