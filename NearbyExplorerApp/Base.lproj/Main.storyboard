@@ -146,12 +146,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3LS-Gp-aaa">
+                                <rect key="frame" x="100" y="409" width="193" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cG6-r6-Xgg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="PHD-Jn-Mo4"/>
                     <connections>
+                        <outlet property="tvConfirmPassword" destination="3LS-Gp-aaa" id="53J-JR-8SE"/>
                         <outlet property="tvEmail" destination="uVJ-dn-Lpe" id="l4f-uR-TKE"/>
                         <outlet property="tvName" destination="f1h-d0-Hmk" id="fIT-GV-mH2"/>
                         <outlet property="tvPassword" destination="8od-uf-12e" id="xIT-wZ-1eb"/>

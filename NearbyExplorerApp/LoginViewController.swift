@@ -15,7 +15,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var tvPassword: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tvPassword.isSecureTextEntry = true
         // Do any additional setup after loading the view.
     }
     
