@@ -48,15 +48,14 @@ class RegisterViewController: UIViewController {
             self.present(mismatchAlert, animated: true, completion: nil)
             return
         }
-        // Check password criteria (e.g., minimum length)
-           guard password.count >= 8 else {
-               // Show an alert for insufficient password length
-               let lengthAlert = UIAlertController(title: "Password Too Short", message: "Password must be at least 8 characters long.", preferredStyle: .alert)
-               let dismissAction = UIAlertAction(title: "Dismiss", style: .default, handler: nil)
-               lengthAlert.addAction(dismissAction)
-               self.present(lengthAlert, animated: true, completion: nil)
-               return
-           }
+        guard password.count >= 8 else {
+                // Show an alert for insufficient password length
+                let lengthAlert = UIAlertController(title: "Password Too Short", message: "Password must be at least 8 characters long.", preferredStyle: .alert)
+                let dismissAction = UIAlertAction(title: "Dismiss", style: .default, handler: nil)
+                lengthAlert.addAction(dismissAction)
+                self.present(lengthAlert, animated: true, completion: nil)
+                return
+            }
 
 
         // Check if the email already exists in the database
@@ -71,10 +70,11 @@ class RegisterViewController: UIViewController {
         } else {
             // Email doesn't exist, proceed with registration
             do {
-                let hashedPassword = try hashPassword(password: password)
-                let q = "insert into logindata(name,email,password) values ('\(name)' , '\(email)' , '\(hashedPassword)')"
-                let result = db.executeQuery(query: q)
-
+//                let hashedPassword = try hashPassword(password: password)
+//                let q = "insert into logindata(name,email,password) values ('\(name)' , '\(email)' , '\(hashedPassword)')"
+//                let result = db.executeQuery(query: q)
+                let q = "insert into logindata(name,email,password) values ('\(name)' , '\(email)' , '\(password)')"
+                           let result = db.executeQuery(query: q)
                 if result {
                     // Successfully registered
                     let successAlert = UIAlertController(title: "Success", message: "Successfully registered!", preferredStyle: .alert)
@@ -92,17 +92,17 @@ class RegisterViewController: UIViewController {
                     self.present(invalidAlert, animated: true, completion: nil)
                 }
             }
-            catch {
-                print("Error hashing password: \(error)")
-            }
+//            catch {
+//                print("Error hashing password: \(error)")
+//            }
         }
     }
 
-    func hashPassword(password: String) throws -> String {
-            let passwordData = Data(password.utf8)
-            let hashed = SHA256.hash(data: passwordData)
-            return hashed.compactMap { String(format: "%02x", $0) }.joined()
-        }
+//    func hashPassword(password: String) throws -> String {
+//            let passwordData = Data(password.utf8)
+//            let hashed = SHA256.hash(data: passwordData)
+//            return hashed.compactMap { String(format: "%02x", $0) }.joined()
+//        }
 
     
     /*
