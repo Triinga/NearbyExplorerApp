@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NearbyExplorerApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstPageViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="NearbyExplorerApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -127,7 +127,7 @@
                     <connections>
                         <outlet property="tvEmail" destination="Jl7-iI-BHd" id="ZCG-mE-CBb"/>
                         <outlet property="tvPassword" destination="1O9-Lu-fXv" id="OUE-7E-w0K"/>
-                        <segue destination="P8t-kj-KpF" kind="show" identifier="goToNext" id="xXd-hp-MaU"/>
+                        <segue destination="EBT-Eg-VDP" kind="show" identifier="goToNext" id="xXd-hp-MaU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S9R-z2-W4h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -150,11 +150,17 @@
                         <viewLayoutGuide key="safeArea" id="U91-VN-YBT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="3aN-we-Nhe"/>
+                    <navigationItem key="navigationItem" id="3aN-we-Nhe">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="XsS-Ac-6Nn">
+                            <connections>
+                                <action selector="logoutButtonTapped:" destination="P8t-kj-KpF" id="2KY-N7-Eq9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="55k-ho-cBm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2919.8473282442746" y="19.718309859154932"/>
+            <point key="canvasLocation" x="3846.5648854961833" y="19.718309859154932"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="o7g-yX-g9f">
@@ -256,9 +262,28 @@
             </objects>
             <point key="canvasLocation" x="35.877862595419849" y="-40.140845070422536"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QmU-ba-YJA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EBT-Eg-VDP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="eRc-zT-bub"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rcP-mR-vYU">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="P8t-kj-KpF" kind="relationship" relationship="rootViewController" id="aaJ-sM-Wt8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XOi-Di-7Qn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2919.8473282442746" y="19.718309859154932"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9Vn-Sn-19c"/>
+        <segue reference="3UQ-jA-ckn"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="backgroundImg" width="564" height="1002"/>

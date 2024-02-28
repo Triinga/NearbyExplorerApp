@@ -8,6 +8,19 @@ import UIKit
 import MapKit
 
 class MapViewController: UIViewController{
+    
+    @IBAction func logoutButtonTapped(_ sender: UIBarButtonItem){
+        
+        
+        let firstPageViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "FirstPageViewController")
+        
+        if let sceneDelegate = view.window?.windowScene?.delegate as? SceneDelegate,
+           let window = sceneDelegate.window {
+            window.rootViewController = firstPageViewController
+            
+            UIView.transition(with: window, duration: 0.25, options: .transitionCrossDissolve, animations: nil, completion: nil)
+        }
+    }
 //
     var locationManager: CLLocationManager?
     private var places: [PlaceAnnotation] = []
