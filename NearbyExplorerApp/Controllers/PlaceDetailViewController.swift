@@ -4,16 +4,18 @@
 //
 //  Created by Lediona Kadiri on 24.2.24.
 //
-
 import Foundation
 import UIKit
 
-//when we click a place on the table to show information
+protocol PlaceDetailViewControllerDelegate: AnyObject {
+    func didTapSaveToFavorites()
+}
 
-class PlaceDetailViewController: UIViewController{
-
+class PlaceDetailViewController: UIViewController {
     let place: PlaceAnnotation
-
+    weak var delegate: PlaceDetailViewControllerDelegate?
+    
+    
     lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
@@ -41,16 +43,17 @@ class PlaceDetailViewController: UIViewController{
         return button
     }()
 
-    var callButton: UIButton = {
+   
+
+    var saveToFavoritesButton: UIButton = {
         var config = UIButton.Configuration.bordered()
         let button = UIButton(configuration: config)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Call", for: .normal)
+        button.setTitle("Save to Favorites", for: .normal)
         return button
     }()
 
-
-    init (place: PlaceAnnotation){
+    init(place: PlaceAnnotation) {
         self.place = place
         super.init(nibName: nil, bundle: nil)
         setupUI()
@@ -65,41 +68,37 @@ class PlaceDetailViewController: UIViewController{
         fatalError("init(coder:) has not been implemented")
     }
 
-    @objc func directionsButtonTapped(_ sender: UIButton){
+    @objc func directionsButtonTapped(_ sender: UIButton) {
         let coordinate = place.location.coordinate
-        guard let url = URL(string: "https://maps.apple.com/?daddr=\(coordinate.latitude),\(coordinate.longitude)") else {return}
-
+        guard let url = URL(string: "https://maps.apple.com/?daddr=\(coordinate.latitude),\(coordinate.longitude)") else {
+            return
+        }
         UIApplication.shared.open(url)
     }
 
-//    @objc func callButtonTapped(_ sender: UIButton){
-//        //place.phone = +(512)-435-2345
-//        // what we need = 5124352345
-//        guard let url = URL(string: "tel://\(place.phone.formatPhoneForCall)")
-//        else { return }
-//        UIApplication.shared.open(url)
-//
-//    }
+    @objc func saveToFavoritesButtonTapped(_ sender: UIButton) {
+           place.isSelected.toggle()
+
+           UserDefaults.standard.set(place.isSelected, forKey: place.id.uuidString)
+
+           if place.isSelected {
+               let favoritePlace = FavoritePlace(place: place)
+               FavoritesModel.addFavorite(favoritePlace)
+           } else {
+               if let index = FavoritesModel.favorites.firstIndex(where: { $0.name == place.name }) {
+                   FavoritesModel.removeFavorite(at: index)
+               }
+           }
+
+           // Notify the delegate when "Save to Favorites" is tapped
+           delegate?.didTapSaveToFavorites()
+       }
+
+
+
+
     
-    @objc func callButtonTapped(_ sender: UIButton){
-        // Remove non-numeric characters from the phone number
-        let allowedCharacters = CharacterSet.decimalDigits
-        let formattedPhoneNumber = place.phone.components(separatedBy: allowedCharacters.inverted).joined()
-        
-        guard let url = URL(string: "tel://\(formattedPhoneNumber)") else {
-            print("Invalid phone number or URL")
-            return
-        }
-        
-        if UIApplication.shared.canOpenURL(url) {
-            UIApplication.shared.open(url)
-        } else {
-            print("Failed to open URL")
-        }
-    }
-
-
-    private func setupUI(){
+    private func setupUI() {
         let stackView = UIStackView()
         stackView.alignment = .leading
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -118,19 +117,19 @@ class PlaceDetailViewController: UIViewController{
 
         let contactStackView = UIStackView()
         contactStackView.translatesAutoresizingMaskIntoConstraints = false
-        contactStackView.axis = .horizontal
+        contactStackView.axis = .vertical  // Change here to vertical
         contactStackView.spacing = UIStackView.spacingUseSystem
 
         directionsButton.addTarget(self, action: #selector(directionsButtonTapped), for: .touchUpInside)
-        callButton.addTarget(self, action: #selector(callButtonTapped), for: .touchUpInside)
+       
+        saveToFavoritesButton.addTarget(self, action: #selector(saveToFavoritesButtonTapped(_:)), for: .touchUpInside)
 
         contactStackView.addArrangedSubview(directionsButton)
-        contactStackView.addArrangedSubview(callButton)
+      
+        contactStackView.addArrangedSubview(saveToFavoritesButton)
 
         stackView.addArrangedSubview(contactStackView)
 
-
         view.addSubview(stackView)
-
     }
 }

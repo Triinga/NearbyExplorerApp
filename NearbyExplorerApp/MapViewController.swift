@@ -7,8 +7,13 @@
 import UIKit
 import MapKit
 
+protocol MapViewControllerDelegate: AnyObject {
+    func navigateToFavoritesList()
+}
+
 class MapViewController: UIViewController{
 //
+    weak var delegate: MapViewControllerDelegate?
     var locationManager: CLLocationManager?
     private var places: [PlaceAnnotation] = []
     
@@ -33,7 +38,10 @@ class MapViewController: UIViewController{
         return searchTextField
     }()
 
-    
+    func navigateToFavoritesList() {
+           delegate?.navigateToFavoritesList()
+       }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -197,3 +205,10 @@ extension MapViewController: CLLocationManagerDelegate {
     }
     
 }
+extension MapViewController: PlaceDetailViewControllerDelegate {
+       func didTapSaveToFavorites() {
+           // Handle navigation to FavoritesListViewController
+           navigateToFavoritesList()
+       }
+   }
+

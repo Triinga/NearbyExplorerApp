@@ -18,6 +18,9 @@
 		F7823AE72B7EA32100A0C806 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7823AE52B7EA32100A0C806 /* Main.storyboard */; };
 		F7823AE92B7EA32500A0C806 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7823AE82B7EA32500A0C806 /* Assets.xcassets */; };
 		F7823AEC2B7EA32500A0C806 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7823AEA2B7EA32500A0C806 /* LaunchScreen.storyboard */; };
+		F782BEF72B8FDD1500165E38 /* FavoritesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782BEF62B8FDD1500165E38 /* FavoritesListViewController.swift */; };
+		F782BEF92B8FDFEE00165E38 /* FavoritePlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782BEF82B8FDFEE00165E38 /* FavoritePlace.swift */; };
+		F782BEFB2B8FE0F500165E38 /* FavoriteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F782BEFA2B8FE0F400165E38 /* FavoriteModel.swift */; };
 		F78B80C42B8364FB00E33E19 /* nearbyappDB.db in Resources */ = {isa = PBXBuildFile; fileRef = F78B80C32B8364FB00E33E19 /* nearbyappDB.db */; };
 		F78B80C62B83652D00E33E19 /* DBHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78B80C52B83652D00E33E19 /* DBHandler.swift */; };
 		F78B80C82B83667500E33E19 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78B80C72B83667500E33E19 /* RegisterViewController.swift */; };
@@ -43,6 +46,9 @@
 		F7823AE82B7EA32500A0C806 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7823AEB2B7EA32500A0C806 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F7823AED2B7EA32500A0C806 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F782BEF62B8FDD1500165E38 /* FavoritesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListViewController.swift; sourceTree = "<group>"; };
+		F782BEF82B8FDFEE00165E38 /* FavoritePlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePlace.swift; sourceTree = "<group>"; };
+		F782BEFA2B8FE0F400165E38 /* FavoriteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteModel.swift; sourceTree = "<group>"; };
 		F78B80C32B8364FB00E33E19 /* nearbyappDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = nearbyappDB.db; sourceTree = "<group>"; };
 		F78B80C52B83652D00E33E19 /* DBHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHandler.swift; sourceTree = "<group>"; };
 		F78B80C72B83667500E33E19 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +134,9 @@
 				F78B80C72B83667500E33E19 /* RegisterViewController.swift */,
 				F78B80C92B836B4F00E33E19 /* entities.swift */,
 				F78CECF82B89772400F29421 /* MapViewController.swift */,
+				F782BEF62B8FDD1500165E38 /* FavoritesListViewController.swift */,
+				F782BEF82B8FDFEE00165E38 /* FavoritePlace.swift */,
+				F782BEFA2B8FE0F400165E38 /* FavoriteModel.swift */,
 			);
 			path = NearbyExplorerApp;
 			sourceTree = "<group>";
@@ -211,8 +220,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F782BEFB2B8FE0F500165E38 /* FavoriteModel.swift in Sources */,
+				F782BEF72B8FDD1500165E38 /* FavoritesListViewController.swift in Sources */,
 				F78B80C62B83652D00E33E19 /* DBHandler.swift in Sources */,
 				61F6CEB52B8972E500691ACC /* String+Extensions.swift in Sources */,
+				F782BEF92B8FDFEE00165E38 /* FavoritePlace.swift in Sources */,
 				61F6CEAE2B89478500691ACC /* CLLocation+Extensions.swift in Sources */,
 				61F6CEAB2B8945AE00691ACC /* PlaceAnnotation.swift in Sources */,
 				F7A083492B81348F00EDB7B5 /* LoginViewController.swift in Sources */,
