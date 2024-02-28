@@ -11,8 +11,8 @@ class LoginViewController: UIViewController {
     let db = Databasehandler()
 
     @IBOutlet weak var tvEmail: UITextField!
-    
     @IBOutlet weak var tvPassword: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
