@@ -1,5 +1,12 @@
-# Rreth projektit
+# Nearby Explorer
 Ky projekt paraqet një aplikacion të thjeshtë, i cili është i dizajnuar për turista. Në aplikacion mundësohet kycja dhe regjistrimi i turistëve dhe kërkimi i restauranteve, kafeneve, hoteleve afër vendit që e vizitojnë.
+
+
+![firstPageView](https://github.com/Triinga/NearbyExplorerApp/assets/121345932/9f11e018-57f8-413b-839e-fb041d4970c5)
+![loginView](https://github.com/Triinga/NearbyExplorerApp/assets/121345932/701a636b-b26d-4c2a-badd-ee4f945d20d8)
+![registerView](https://github.com/Triinga/NearbyExplorerApp/assets/121345932/a05b7ab4-78f8-4320-a504-b742a1ba5f1c)
+<img width="382" alt="Screenshot 2024-02-29 at 10 24 59" src="https://github.com/Triinga/NearbyExplorerApp/assets/121345932/816efa79-8a1b-4149-8827-487bd0b58bd8">
+<img width="374" alt="Screenshot 2024-02-29 at 10 25 49" src="https://github.com/Triinga/NearbyExplorerApp/assets/121345932/85e1770c-acb5-46c2-865d-94afc89f4e36">
 
 # Teknologjitë e përdorura
 * XCode - version 14
