@@ -41,13 +41,7 @@ class PlaceDetailViewController: UIViewController{
         return button
     }()
 
-    var callButton: UIButton = {
-        var config = UIButton.Configuration.bordered()
-        let button = UIButton(configuration: config)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Call", for: .normal)
-        return button
-    }()
+   
 
 
     init (place: PlaceAnnotation){
@@ -72,31 +66,8 @@ class PlaceDetailViewController: UIViewController{
         UIApplication.shared.open(url)
     }
 
-//    @objc func callButtonTapped(_ sender: UIButton){
-//        //place.phone = +(512)-435-2345
-//        // what we need = 5124352345
-//        guard let url = URL(string: "tel://\(place.phone.formatPhoneForCall)")
-//        else { return }
-//        UIApplication.shared.open(url)
-//
-//    }
     
-    @objc func callButtonTapped(_ sender: UIButton){
-        // Remove non-numeric characters from the phone number
-        let allowedCharacters = CharacterSet.decimalDigits
-        let formattedPhoneNumber = place.phone.components(separatedBy: allowedCharacters.inverted).joined()
-        
-        guard let url = URL(string: "tel://\(formattedPhoneNumber)") else {
-            print("Invalid phone number or URL")
-            return
-        }
-        
-        if UIApplication.shared.canOpenURL(url) {
-            UIApplication.shared.open(url)
-        } else {
-            print("Failed to open URL")
-        }
-    }
+
 
 
     private func setupUI(){
@@ -122,10 +93,10 @@ class PlaceDetailViewController: UIViewController{
         contactStackView.spacing = UIStackView.spacingUseSystem
 
         directionsButton.addTarget(self, action: #selector(directionsButtonTapped), for: .touchUpInside)
-        callButton.addTarget(self, action: #selector(callButtonTapped), for: .touchUpInside)
+        
 
         contactStackView.addArrangedSubview(directionsButton)
-        contactStackView.addArrangedSubview(callButton)
+    
 
         stackView.addArrangedSubview(contactStackView)
 

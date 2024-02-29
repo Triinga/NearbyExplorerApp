@@ -11,10 +11,8 @@ import CryptoKit
 class RegisterViewController: UIViewController {
 
     @IBOutlet weak var tvName: UITextField!
-    
     @IBOutlet weak var tvPassword: UITextField!
     @IBOutlet weak var tvEmail: UITextField!
-    
     @IBOutlet weak var tvConfirmPassword: UITextField!
     let db = Databasehandler()
     
@@ -23,7 +21,6 @@ class RegisterViewController: UIViewController {
         tvPassword.isSecureTextEntry = true  // Set secure text entry for password field
         tvConfirmPassword.isSecureTextEntry = true
 
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func registerClicked(_ sender: UIButton) {
@@ -31,6 +28,7 @@ class RegisterViewController: UIViewController {
               let password = tvPassword.text, !password.isEmpty,
               let confirmPassword = tvConfirmPassword.text, !confirmPassword.isEmpty,
               let name = tvName.text, !name.isEmpty else {
+            
             // Show an alert for missing fields
             let missingFieldsAlert = UIAlertController(title: "Missing Fields", message: "Please fill in all the fields.", preferredStyle: .alert)
             let dismissAction = UIAlertAction(title: "Dismiss", style: .default, handler: nil)
@@ -70,16 +68,13 @@ class RegisterViewController: UIViewController {
         } else {
             // Email doesn't exist, proceed with registration
             do {
-//                let hashedPassword = try hashPassword(password: password)
-//                let q = "insert into logindata(name,email,password) values ('\(name)' , '\(email)' , '\(hashedPassword)')"
-//                let result = db.executeQuery(query: q)
                 let q = "insert into logindata(name,email,password) values ('\(name)' , '\(email)' , '\(password)')"
                            let result = db.executeQuery(query: q)
                 if result {
                     // Successfully registered
                     let successAlert = UIAlertController(title: "Success", message: "Successfully registered!", preferredStyle: .alert)
                     let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-                        // Navigate to the login screen or perform any other actions after successful registration
+                        // Navigate to the login screen
                         self.performSegue(withIdentifier: "goToLogin", sender: self)
                     }
                     successAlert.addAction(okAction)
@@ -92,17 +87,10 @@ class RegisterViewController: UIViewController {
                     self.present(invalidAlert, animated: true, completion: nil)
                 }
             }
-//            catch {
-//                print("Error hashing password: \(error)")
-//            }
         }
     }
 
-//    func hashPassword(password: String) throws -> String {
-//            let passwordData = Data(password.utf8)
-//            let hashed = SHA256.hash(data: passwordData)
-//            return hashed.compactMap { String(format: "%02x", $0) }.joined()
-//        }
+
 
     
     /*

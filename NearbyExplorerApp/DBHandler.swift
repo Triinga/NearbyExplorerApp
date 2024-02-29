@@ -86,7 +86,7 @@ class Databasehandler {
         return false
     }
     
-    //++++++++++++++++++++++ Deleting from database++++++++++++++++++
+    //deleting from database
     
     func deleteQuery(query: String)->Bool{
         
@@ -117,7 +117,7 @@ class Databasehandler {
         print("delete")
         return false
     
-    
+    //to check if email exists
     }
     func doesEmailExist(email: String) -> Bool {
         let query = "SELECT COUNT(*) FROM logindata WHERE email = '\(email)'"
@@ -141,9 +141,8 @@ class Databasehandler {
     }
 
     
-    /////////////////////////////
-    //Copy database for fist time
-    /////////////////////////////
+    //Copy database for first time
+
     func prepareDatafile()
     {
         let docUrl=NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
@@ -172,9 +171,9 @@ class Databasehandler {
     
     
     
-    /////////////////////////////////////
-    /////Open Connection to Database
-    ////////////////////////////////////
+   
+    //Open Connection to Database
+  
     func openDatabase() -> OpaquePointer? {
         
         let docUrl=NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]

@@ -27,7 +27,7 @@ class MapViewController: UIViewController{
     
     lazy var mapView:MKMapView = {
        let map = MKMapView()
-        map.delegate = self //means that the viewcontroller itself willl be responsible for handling alll those functions
+        map.delegate = self //the viewcontroller itself willl be responsible for handling alll those functions
         map.showsUserLocation = true
         map.translatesAutoresizingMaskIntoConstraints = false
         return map
@@ -120,8 +120,7 @@ class MapViewController: UIViewController{
     }
 
     private func findNearbyPlaces(by query: String){
-        // clear all annotations
-        //mapView.removeAnnotation(mapView.annotations as! MKAnnotation)
+      
         // Safely remove all annotations from the mapView
         if let annotations = mapView.annotations as? [MKAnnotation] {
             mapView.removeAnnotations(annotations)
